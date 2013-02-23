@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C2F82CB16D8A41800EB212A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F82CA16D8A41800EB212A /* Cocoa.framework */; };
+		0C2F82ED16D8A48700EB212A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F82EB16D8A48700EB212A /* main.cpp */; };
+		0C2F82EF16D8A56700EB212A /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F82EE16D8A56700EB212A /* libSDL2-2.0.0.dylib */; };
+		0C2F82F216D8A5CE00EB212A /* wavelike_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C2F82C716D8A41800EB212A /* Wavelike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wavelike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C2F82CA16D8A41800EB212A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0C2F82CD16D8A41800EB212A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0C2F82CE16D8A41800EB212A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0C2F82CF16D8A41800EB212A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0C2F82E716D8A46F00EB212A /* Wavelike-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Wavelike-Info.plist"; sourceTree = "<group>"; };
+		0C2F82E816D8A46F00EB212A /* Wavelike-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wavelike-Prefix.pch"; sourceTree = "<group>"; };
+		0C2F82EB16D8A48700EB212A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0C2F82EE16D8A56700EB212A /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../usr/local/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavelike_app.cpp; sourceTree = "<group>"; };
+		0C2F82F116D8A5CE00EB212A /* wavelike_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavelike_app.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C2F82C416D8A41800EB212A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C2F82EF16D8A56700EB212A /* libSDL2-2.0.0.dylib in Frameworks */,
+				0C2F82CB16D8A41800EB212A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C2F82BA16D8A3D700EB212A = {
+			isa = PBXGroup;
+			children = (
+				0C2F82E516D8A46100EB212A /* shaders */,
+				0C2F82E616D8A46100EB212A /* src */,
+				0C2F82EA16D8A47600EB212A /* Resources */,
+				0C2F82C916D8A41800EB212A /* Frameworks */,
+				0C2F82C816D8A41800EB212A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C2F82C816D8A41800EB212A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F82C716D8A41800EB212A /* Wavelike.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C2F82C916D8A41800EB212A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F82EE16D8A56700EB212A /* libSDL2-2.0.0.dylib */,
+				0C2F82CA16D8A41800EB212A /* Cocoa.framework */,
+				0C2F82CC16D8A41800EB212A /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C2F82CC16D8A41800EB212A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F82CD16D8A41800EB212A /* AppKit.framework */,
+				0C2F82CE16D8A41800EB212A /* CoreData.framework */,
+				0C2F82CF16D8A41800EB212A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0C2F82E516D8A46100EB212A /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = shaders;
+			path = ../shaders;
+			sourceTree = "<group>";
+		};
+		0C2F82E616D8A46100EB212A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F82EB16D8A48700EB212A /* main.cpp */,
+				0C2F82F116D8A5CE00EB212A /* wavelike_app.h */,
+				0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		0C2F82EA16D8A47600EB212A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C2F82E716D8A46F00EB212A /* Wavelike-Info.plist */,
+				0C2F82E816D8A46F00EB212A /* Wavelike-Prefix.pch */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C2F82C616D8A41800EB212A /* Wavelike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C2F82E216D8A41900EB212A /* Build configuration list for PBXNativeTarget "Wavelike" */;
+			buildPhases = (
+				0C2F82C316D8A41800EB212A /* Sources */,
+				0C2F82C416D8A41800EB212A /* Frameworks */,
+				0C2F82C516D8A41800EB212A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wavelike;
+			productName = Wavelike;
+			productReference = 0C2F82C716D8A41800EB212A /* Wavelike.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C2F82BB16D8A3D700EB212A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 0C2F82BE16D8A3D700EB212A /* Build configuration list for PBXProject "Wavelike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0C2F82BA16D8A3D700EB212A;
+			productRefGroup = 0C2F82C816D8A41800EB212A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C2F82C616D8A41800EB212A /* Wavelike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C2F82C516D8A41800EB212A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C2F82C316D8A41800EB212A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C2F82ED16D8A48700EB212A /* main.cpp in Sources */,
+				0C2F82F216D8A5CE00EB212A /* wavelike_app.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0C2F82BF16D8A3D700EB212A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		0C2F82C016D8A3D700EB212A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		0C2F82E316D8A41900EB212A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wavelike-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INFOPLIST_FILE = "Wavelike-Info.plist";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0C2F82E416D8A41900EB212A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wavelike-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INFOPLIST_FILE = "Wavelike-Info.plist";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C2F82BE16D8A3D700EB212A /* Build configuration list for PBXProject "Wavelike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C2F82BF16D8A3D700EB212A /* Debug */,
+				0C2F82C016D8A3D700EB212A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C2F82E216D8A41900EB212A /* Build configuration list for PBXNativeTarget "Wavelike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C2F82E316D8A41900EB212A /* Debug */,
+				0C2F82E416D8A41900EB212A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C2F82BB16D8A3D700EB212A /* Project object */;
+}
