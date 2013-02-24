@@ -11,7 +11,7 @@ int main(int argc, const char **argv)
 {
     using namespace zdev;
     
-    WavelikeApp app;
+    WavelikeApp app(argc, argv);
     app.run();
     
     return 0;

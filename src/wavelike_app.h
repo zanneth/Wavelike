@@ -8,12 +8,14 @@
 #pragma once
 
 #include <SDL2/SDL.h>
+#include "display.h"
 
 namespace zdev {
 
 class WavelikeApp {
 public:
     WavelikeApp(int argc = 0, const char **argv = nullptr);
+    WavelikeApp(const WavelikeApp&) = delete;
     ~WavelikeApp();
     
     void run();
@@ -21,8 +23,8 @@ public:
 protected:
     int _argc;
     const char **_argv;
-    SDL_Window *_window;
     bool _running;
+    Display _display;
 };
     
 } // namespace

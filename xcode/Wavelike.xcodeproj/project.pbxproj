@@ -11,6 +11,13 @@
 		0C2F82ED16D8A48700EB212A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F82EB16D8A48700EB212A /* main.cpp */; };
 		0C2F82EF16D8A56700EB212A /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F82EE16D8A56700EB212A /* libSDL2-2.0.0.dylib */; };
 		0C2F82F216D8A5CE00EB212A /* wavelike_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */; };
+		0C32840416D9578C00AB86E4 /* display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C32840216D9578C00AB86E4 /* display.cpp */; };
+		0C4E3EAA16D9FF8300B25C4C /* wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E3EA816D9FF8300B25C4C /* wave.cpp */; };
+		0C4E3EAD16D9FF8C00B25C4C /* background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E3EAB16D9FF8C00B25C4C /* background.cpp */; };
+		0C4E3EB016DA015B00B25C4C /* layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E3EAE16DA015B00B25C4C /* layer.cpp */; };
+		0C6AA65816D98F4300BFFA62 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6AA65716D98F4300BFFA62 /* OpenGL.framework */; };
+		0C9E7EAE16DA03E6009AD8B2 /* background_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */; };
+		0C9E7EB116DA055D009AD8B2 /* shader_program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7EAF16DA055D009AD8B2 /* shader_program.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +32,18 @@
 		0C2F82EE16D8A56700EB212A /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../usr/local/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 		0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavelike_app.cpp; sourceTree = "<group>"; };
 		0C2F82F116D8A5CE00EB212A /* wavelike_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavelike_app.h; sourceTree = "<group>"; };
+		0C32840216D9578C00AB86E4 /* display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = display.cpp; sourceTree = "<group>"; };
+		0C32840316D9578C00AB86E4 /* display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = display.h; sourceTree = "<group>"; };
+		0C4E3EA816D9FF8300B25C4C /* wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wave.cpp; sourceTree = "<group>"; };
+		0C4E3EA916D9FF8300B25C4C /* wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wave.h; sourceTree = "<group>"; };
+		0C4E3EAB16D9FF8C00B25C4C /* background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = background.cpp; sourceTree = "<group>"; };
+		0C4E3EAC16D9FF8C00B25C4C /* background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = background.h; sourceTree = "<group>"; };
+		0C4E3EAE16DA015B00B25C4C /* layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = layer.cpp; sourceTree = "<group>"; };
+		0C4E3EAF16DA015B00B25C4C /* layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = layer.h; sourceTree = "<group>"; };
+		0C6AA65716D98F4300BFFA62 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = background_frag.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		0C9E7EAF16DA055D009AD8B2 /* shader_program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader_program.cpp; sourceTree = "<group>"; };
+		0C9E7EB016DA055D009AD8B2 /* shader_program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader_program.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6AA65816D98F4300BFFA62 /* OpenGL.framework in Frameworks */,
 				0C2F82EF16D8A56700EB212A /* libSDL2-2.0.0.dylib in Frameworks */,
 				0C2F82CB16D8A41800EB212A /* Cocoa.framework in Frameworks */,
 			);
@@ -63,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				0C2F82EE16D8A56700EB212A /* libSDL2-2.0.0.dylib */,
+				0C6AA65716D98F4300BFFA62 /* OpenGL.framework */,
 				0C2F82CA16D8A41800EB212A /* Cocoa.framework */,
 				0C2F82CC16D8A41800EB212A /* Other Frameworks */,
 			);
@@ -82,6 +103,7 @@
 		0C2F82E516D8A46100EB212A /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */,
 			);
 			name = shaders;
 			path = ../shaders;
@@ -90,7 +112,17 @@
 		0C2F82E616D8A46100EB212A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0C4E3EAC16D9FF8C00B25C4C /* background.h */,
+				0C4E3EAB16D9FF8C00B25C4C /* background.cpp */,
+				0C32840316D9578C00AB86E4 /* display.h */,
+				0C32840216D9578C00AB86E4 /* display.cpp */,
+				0C4E3EAF16DA015B00B25C4C /* layer.h */,
+				0C4E3EAE16DA015B00B25C4C /* layer.cpp */,
 				0C2F82EB16D8A48700EB212A /* main.cpp */,
+				0C9E7EB016DA055D009AD8B2 /* shader_program.h */,
+				0C9E7EAF16DA055D009AD8B2 /* shader_program.cpp */,
+				0C4E3EA916D9FF8300B25C4C /* wave.h */,
+				0C4E3EA816D9FF8300B25C4C /* wave.cpp */,
 				0C2F82F116D8A5CE00EB212A /* wavelike_app.h */,
 				0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */,
 			);
@@ -157,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9E7EAE16DA03E6009AD8B2 /* background_frag.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,8 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4E3EAA16D9FF8300B25C4C /* wave.cpp in Sources */,
+				0C4E3EAD16D9FF8C00B25C4C /* background.cpp in Sources */,
 				0C2F82ED16D8A48700EB212A /* main.cpp in Sources */,
+				0C9E7EB116DA055D009AD8B2 /* shader_program.cpp in Sources */,
 				0C2F82F216D8A5CE00EB212A /* wavelike_app.cpp in Sources */,
+				0C32840416D9578C00AB86E4 /* display.cpp in Sources */,
+				0C4E3EB016DA015B00B25C4C /* layer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +229,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -220,7 +259,6 @@
 				INFOPLIST_FILE = "Wavelike-Info.plist";
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -231,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -280,6 +319,7 @@
 				0C2F82E416D8A41900EB212A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

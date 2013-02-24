@@ -7,6 +7,7 @@
  
 #include "wavelike_app.h"
 #include <iostream>
+#include <unistd.h>
 
 namespace zdev {
 
@@ -17,28 +18,20 @@ WavelikeApp::WavelikeApp(int argc, const char **argv) :
 {}
 
 WavelikeApp::~WavelikeApp()
-{
-    if (_window != nullptr) {
-        SDL_DestroyWindow(_window);
-    }
-}
+{}
 
 void WavelikeApp::run()
 {
-    _running = true;
     SDL_Init(SDL_INIT_VIDEO);
     
-    _window = SDL_CreateWindow("Wavelike",
-                                SDL_WINDOWPOS_UNDEFINED,
-                                SDL_WINDOWPOS_UNDEFINED,
-                                1024, 768,
-                                SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
-    if (_window == nullptr) {
-        std::cerr << "Could not create SDL window." << std::endl;
-        return;
-    }
+    _display.initialize();
     
+    _running = true;
     while (_running) {
+        // update the display
+        _display.update();
+        
+        // update input
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
             switch (event.type) {
@@ -49,6 +42,9 @@ void WavelikeApp::run()
                     break;
             }
         }
+        
+        // sleep so that we update on an interval
+        usleep(1000);
     }
     
     SDL_Quit();
