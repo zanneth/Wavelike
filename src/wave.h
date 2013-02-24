@@ -8,6 +8,7 @@
 #pragma once
 
 #include "layer.h"
+#include "shader_program.h"
 
 namespace zdev {
 
@@ -16,7 +17,15 @@ public:
     Wave();
     ~Wave();
     
+    void initialize() override;
     void draw() override;
+    
+protected:
+    void _generate_wave_vertices(unsigned count, GLfloat *out_vertices);
+    void _load_buffers();
+    
+protected:
+    GLuint _vertex_buffer;
 };
 
 } // namespace zdev

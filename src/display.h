@@ -8,8 +8,13 @@
 #pragma once
 
 #include <SDL2/SDL.h>
-#include <vector>
+#include <SDL2/SDL_opengl.h>
+#include <algorithm>
+#include <utility>
+
 #include "layer.h"
+#include "shader_program.h"
+#include "utility.h"
 
 namespace zdev {
 
@@ -22,6 +27,10 @@ public:
     void initialize();
     void update();
     
+    const Matrix4f& get_projection_matrix();
+    const std::pair<unsigned, unsigned>& get_viewport_size() const;
+    void set_viewport_size(const std::pair<unsigned, unsigned> &size);
+    
 protected:
     void _init_window();
     void _init_opengl();
@@ -30,7 +39,10 @@ protected:
 protected:
     SDL_Window *_window;
     SDL_GLContext _context;
+    std::pair<unsigned, unsigned> _viewport_size;
     std::vector<LayerRef> _layers;
+    Matrix4f _projection_matrix;
+    bool _projection_dirty;
 };
 
 } // namespace zdev

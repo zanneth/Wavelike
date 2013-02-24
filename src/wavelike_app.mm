@@ -24,6 +24,7 @@ void WavelikeApp::run()
 {
     SDL_Init(SDL_INIT_VIDEO);
     
+    _change_resources_dir();
     _display.initialize();
     
     _running = true;
@@ -48,6 +49,26 @@ void WavelikeApp::run()
     }
     
     SDL_Quit();
+}
+
+// internal
+
+void WavelikeApp::_change_resources_dir()
+{
+#ifdef __APPLE__
+#include "CoreFoundation/CoreFoundation.h"
+#endif
+#ifdef __APPLE__
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
+    char path[PATH_MAX];
+    if (!CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX))
+    {
+        // error!
+    }
+    CFRelease(resourcesURL);
+    chdir(path);
+#endif
 }
     
 } // namespace

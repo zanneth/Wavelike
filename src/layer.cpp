@@ -9,6 +9,16 @@
 
 namespace zdev {
 
+Layer::Layer() :
+    _display(nullptr)
+{}
+
+Layer::~Layer()
+{}
+
+void Layer::initialize()
+{}
+
 void Layer::draw()
 {}
 

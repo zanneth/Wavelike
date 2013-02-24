@@ -8,6 +8,8 @@
 #pragma once
 
 #include "layer.h"
+#include "shader_program.h"
+#include "utility.h"
 
 namespace zdev {
 
@@ -16,7 +18,19 @@ public:
     Background();
     ~Background();
     
+    void initialize() override;
     void draw() override;
+    
+protected:
+    void _load_buffers();
+    void _load_shaders();
+    void _update_uniforms();
+
+protected:
+    Vertex4f _begin_color;
+    Vertex4f _end_color;
+    ShaderProgramRef _shader_program;
+    GLuint _vertex_buffer;
 };
 
 } // namespace zdev

@@ -28,12 +28,18 @@ enum VertexAttribute {
 class ShaderProgram {
 public:
     ShaderProgram();
+    ShaderProgram(const ShaderProgram&) = delete;
     ~ShaderProgram();
     
     GLuint get_program() const { return _program; }
+    std::vector<GLuint> get_attached_shaders() const { return _shaders; }
     bool is_linked() const { return _linked; }
     
-    bool load_shader(const char *filename, GLenum type);
+    static GLuint compile_shader(const char *filename, GLenum type);
+    bool attach_shader(GLuint shader);
+    bool detach_shader(GLuint shader);
+    bool load_shader(const char *filename, GLenum type); // convenience -- compiles and attaches a shader
+    
     bool bind_attribute(VertexAttribute attrib, std::string name);
     bool link_program();
     bool use_program();

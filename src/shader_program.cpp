@@ -26,7 +26,7 @@ ShaderProgram::~ShaderProgram()
     glDeleteProgram(_program);
 }
 
-bool ShaderProgram::load_shader(const char *filename, GLenum type)
+GLuint ShaderProgram::compile_shader(const char *filename, GLenum type)
 {
     using namespace std;
     string shader_src;
@@ -58,16 +58,35 @@ bool ShaderProgram::load_shader(const char *filename, GLenum type)
         glGetShaderInfoLog(shader, errlen, 0, errstr);
         std::cerr << errstr << std::endl;
         delete[] errstr;
+        
+        return 0;
     }
     
-    // attach the shader
-    if (status == GL_TRUE) {
-        // attach and add to our array
-        glAttachShader(_program, shader);
-        _shaders.push_back(shader);
-    }
+    return shader;
+}
+
+bool ShaderProgram::attach_shader(GLuint shader)
+{
+    if (shader == 0) { return false; }
     
-    return status == GL_TRUE;
+    glAttachShader(_program, shader);
+    _shaders.push_back(shader);
+    return true;
+}
+
+bool ShaderProgram::detach_shader(GLuint shader)
+{
+    if (shader == 0) { return false; }
+    
+    glDetachShader(_program, shader);
+    _shaders.erase(std::remove(_shaders.begin(), _shaders.end(), shader), _shaders.end());
+    return true;
+}
+
+bool ShaderProgram::load_shader(const char *filename, GLenum type)
+{
+    GLuint shader = compile_shader(filename, type);
+    return attach_shader(shader);
 }
 
 bool ShaderProgram::bind_attribute(VertexAttribute attrib, std::string name)

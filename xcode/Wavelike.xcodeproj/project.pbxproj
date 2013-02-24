@@ -10,15 +10,31 @@
 		0C2F82CB16D8A41800EB212A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F82CA16D8A41800EB212A /* Cocoa.framework */; };
 		0C2F82ED16D8A48700EB212A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F82EB16D8A48700EB212A /* main.cpp */; };
 		0C2F82EF16D8A56700EB212A /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2F82EE16D8A56700EB212A /* libSDL2-2.0.0.dylib */; };
-		0C2F82F216D8A5CE00EB212A /* wavelike_app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */; };
+		0C2F82F216D8A5CE00EB212A /* wavelike_app.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C2F82F016D8A5CE00EB212A /* wavelike_app.mm */; };
 		0C32840416D9578C00AB86E4 /* display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C32840216D9578C00AB86E4 /* display.cpp */; };
 		0C4E3EAA16D9FF8300B25C4C /* wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E3EA816D9FF8300B25C4C /* wave.cpp */; };
 		0C4E3EAD16D9FF8C00B25C4C /* background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E3EAB16D9FF8C00B25C4C /* background.cpp */; };
 		0C4E3EB016DA015B00B25C4C /* layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E3EAE16DA015B00B25C4C /* layer.cpp */; };
 		0C6AA65816D98F4300BFFA62 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6AA65716D98F4300BFFA62 /* OpenGL.framework */; };
-		0C9E7EAE16DA03E6009AD8B2 /* background_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */; };
 		0C9E7EB116DA055D009AD8B2 /* shader_program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7EAF16DA055D009AD8B2 /* shader_program.cpp */; };
+		0C9E7EB416DA06FE009AD8B2 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7EB216DA06FE009AD8B2 /* utility.cpp */; };
+		0C9E7EB716DA1701009AD8B2 /* background_frag.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */; };
+		0C9E7EB816DA1701009AD8B2 /* projection_vertex.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C9E7EB516DA0A79009AD8B2 /* projection_vertex.glsl */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0CACCCE216DA16EC0065C865 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = shaders;
+			dstSubfolderSpec = 7;
+			files = (
+				0C9E7EB716DA1701009AD8B2 /* background_frag.glsl in CopyFiles */,
+				0C9E7EB816DA1701009AD8B2 /* projection_vertex.glsl in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C2F82C716D8A41800EB212A /* Wavelike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wavelike.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,7 +46,7 @@
 		0C2F82E816D8A46F00EB212A /* Wavelike-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wavelike-Prefix.pch"; sourceTree = "<group>"; };
 		0C2F82EB16D8A48700EB212A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0C2F82EE16D8A56700EB212A /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../usr/local/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
-		0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavelike_app.cpp; sourceTree = "<group>"; };
+		0C2F82F016D8A5CE00EB212A /* wavelike_app.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wavelike_app.mm; sourceTree = "<group>"; };
 		0C2F82F116D8A5CE00EB212A /* wavelike_app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavelike_app.h; sourceTree = "<group>"; };
 		0C32840216D9578C00AB86E4 /* display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = display.cpp; sourceTree = "<group>"; };
 		0C32840316D9578C00AB86E4 /* display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = display.h; sourceTree = "<group>"; };
@@ -44,6 +60,9 @@
 		0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = background_frag.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
 		0C9E7EAF16DA055D009AD8B2 /* shader_program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader_program.cpp; sourceTree = "<group>"; };
 		0C9E7EB016DA055D009AD8B2 /* shader_program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader_program.h; sourceTree = "<group>"; };
+		0C9E7EB216DA06FE009AD8B2 /* utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utility.cpp; sourceTree = "<group>"; };
+		0C9E7EB316DA06FE009AD8B2 /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
+		0C9E7EB516DA0A79009AD8B2 /* projection_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = projection_vertex.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */,
+				0C9E7EB516DA0A79009AD8B2 /* projection_vertex.glsl */,
 			);
 			name = shaders;
 			path = ../shaders;
@@ -121,10 +141,12 @@
 				0C2F82EB16D8A48700EB212A /* main.cpp */,
 				0C9E7EB016DA055D009AD8B2 /* shader_program.h */,
 				0C9E7EAF16DA055D009AD8B2 /* shader_program.cpp */,
+				0C9E7EB316DA06FE009AD8B2 /* utility.h */,
+				0C9E7EB216DA06FE009AD8B2 /* utility.cpp */,
 				0C4E3EA916D9FF8300B25C4C /* wave.h */,
 				0C4E3EA816D9FF8300B25C4C /* wave.cpp */,
 				0C2F82F116D8A5CE00EB212A /* wavelike_app.h */,
-				0C2F82F016D8A5CE00EB212A /* wavelike_app.cpp */,
+				0C2F82F016D8A5CE00EB212A /* wavelike_app.mm */,
 			);
 			name = src;
 			path = ../src;
@@ -148,7 +170,7 @@
 			buildPhases = (
 				0C2F82C316D8A41800EB212A /* Sources */,
 				0C2F82C416D8A41800EB212A /* Frameworks */,
-				0C2F82C516D8A41800EB212A /* Resources */,
+				0CACCCE216DA16EC0065C865 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -184,27 +206,17 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		0C2F82C516D8A41800EB212A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C9E7EAE16DA03E6009AD8B2 /* background_frag.glsl in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		0C2F82C316D8A41800EB212A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9E7EB416DA06FE009AD8B2 /* utility.cpp in Sources */,
 				0C4E3EAA16D9FF8300B25C4C /* wave.cpp in Sources */,
 				0C4E3EAD16D9FF8C00B25C4C /* background.cpp in Sources */,
 				0C2F82ED16D8A48700EB212A /* main.cpp in Sources */,
 				0C9E7EB116DA055D009AD8B2 /* shader_program.cpp in Sources */,
-				0C2F82F216D8A5CE00EB212A /* wavelike_app.cpp in Sources */,
+				0C2F82F216D8A5CE00EB212A /* wavelike_app.mm in Sources */,
 				0C32840416D9578C00AB86E4 /* display.cpp in Sources */,
 				0C4E3EB016DA015B00B25C4C /* layer.cpp in Sources */,
 			);

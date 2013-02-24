@@ -21,6 +21,9 @@ public:
     void run();
 
 protected:
+    void _change_resources_dir();
+
+protected:
     int _argc;
     const char **_argv;
     bool _running;
