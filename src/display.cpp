@@ -100,8 +100,12 @@ void Display::_init_opengl()
 {
     _context = SDL_GL_CreateContext(_window);
     SDL_GL_MakeCurrent(_window, _context);
+    
     glClearColor(0.f, 0.f, 0.f, 1.f);
     glViewport(0, 0, _viewport_size.first, _viewport_size.second);
+    
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 void Display::_init_layers()

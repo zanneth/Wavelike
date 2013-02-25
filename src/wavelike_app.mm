@@ -50,7 +50,7 @@ void WavelikeApp::run()
         }
         
         // sleep so that we update on an interval
-        usleep(1000);
+        usleep(16667);
     }
     
     SDL_Quit();
