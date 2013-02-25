@@ -13,8 +13,9 @@ namespace zdev {
 
 Wave::Wave() :
     _vertex_count(0),
-    _thickness(0.2),
     _current_time(0.0),
+    _thickness(0.2),
+    _speed(0.4),
     _modelview_uniform(-1),
     _time_uniform(-1)
 {}
@@ -107,7 +108,7 @@ void Wave::_update_uniforms()
     glUniformMatrix4fv(_modelview_uniform, 1, GL_FALSE, Util::identity_matrix().data());
     glUniform1f(_time_uniform, _current_time);
     
-    _current_time += 0.005;
+    _current_time += _speed / 100.f;
 }
 
 } // namespace zdev

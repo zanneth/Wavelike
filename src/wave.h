@@ -23,6 +23,8 @@ public:
     
     float get_thickness() const { return _thickness; }
     void set_thickness(float thickness) { _thickness = thickness; }
+    float get_speed() const { return _speed; }
+    void set_speed(float speed) { _speed = speed; }
     
 protected:
     void _generate_wave_vertices(unsigned resolution, std::vector<GLfloat> &out_vertices);
@@ -33,8 +35,10 @@ protected:
 protected:
     GLuint _vertex_buffer;
     unsigned _vertex_count;
-    float _thickness;
     float _current_time;
+    
+    float _thickness;
+    float _speed;
     
     ShaderProgramRef _shader_program;
     GLint _modelview_uniform;
