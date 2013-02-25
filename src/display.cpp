@@ -106,6 +106,9 @@ void Display::_init_opengl()
     
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
+    glEnableVertexAttribArray(VERTEX_ATTRIB_POSITION);
+    glEnableClientState(GL_VERTEX_ARRAY);
 }
 
 void Display::_init_layers()

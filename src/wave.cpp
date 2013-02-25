@@ -36,15 +36,9 @@ void Wave::draw()
     _shader_program->use_program();
     _update_uniforms();
     
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glEnableVertexAttribArray(VERTEX_ATTRIB_POSITION);
-    
     glBindBuffer(GL_ARRAY_BUFFER, _vertex_buffer);
     glVertexAttribPointer(VERTEX_ATTRIB_POSITION, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, _vertex_count);
-    
-    glDisableVertexAttribArray(VERTEX_ATTRIB_POSITION);
-    glDisableClientState(GL_VERTEX_ARRAY);
 }
 
 // internal
@@ -53,7 +47,7 @@ void Wave::_generate_wave_vertices(unsigned resolution, std::vector<GLfloat> &ou
 {
     if (resolution == 0) { return; }
     
-    const float y1 = -(_thickness / 2.f);
+    const float y1 = (_thickness / 2.f);
     const float y2 = -y1;
     const float z = 0.f;
     
@@ -62,11 +56,11 @@ void Wave::_generate_wave_vertices(unsigned resolution, std::vector<GLfloat> &ou
         float x = ((float(i) / float(resolution)) * 2.0) - 1.0;
         
         out_vertices.push_back(x);
-        out_vertices.push_back(y1);
+        out_vertices.push_back(y2);
         out_vertices.push_back(z);
         
         out_vertices.push_back(x);
-        out_vertices.push_back(y2);
+        out_vertices.push_back(y1);
         out_vertices.push_back(z);
     }
 }
@@ -74,7 +68,7 @@ void Wave::_generate_wave_vertices(unsigned resolution, std::vector<GLfloat> &ou
 void Wave::_load_buffers()
 {
     std::vector<GLfloat> vertices;
-    _generate_wave_vertices(100, vertices);
+    _generate_wave_vertices(50, vertices);
     
     GLfloat *vertex_data = vertices.data();
     _vertex_count = (unsigned) vertices.size() / 3;

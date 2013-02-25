@@ -9,14 +9,16 @@
 
 namespace zdev {
 
-Matrix4f Util::identity_matrix()
+const Matrix4f& Util::identity_matrix()
 {
-    return {
+    static Matrix4f identity_matrix = {
         {1.f, 0.f, 0.f, 0.f,
         0.f, 1.f, 0.f, 0.f,
         0.f, 0.f, 1.f, 0.f,
         0.f, 0.f, 0.f, 1.f}
     };
+    
+    return identity_matrix;
 }
 
 Matrix4f Util::ortho_matrix(GLfloat left,

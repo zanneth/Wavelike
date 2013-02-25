@@ -29,8 +29,12 @@ protected:
 protected:
     Vertex4f _begin_color;
     Vertex4f _end_color;
-    ShaderProgramRef _shader_program;
     GLuint _vertex_buffer;
+    
+    ShaderProgramRef _shader_program;
+    GLint _modelview_uniform;
+    GLint _begin_color_uniform;
+    GLint _end_color_uniform;
 };
 
 } // namespace zdev

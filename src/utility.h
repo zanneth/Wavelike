@@ -17,7 +17,7 @@ typedef std::array<GLfloat, 4> Vertex4f;
 
 class Util {
 public:
-    static Matrix4f identity_matrix();
+    static const Matrix4f& identity_matrix();
     static Matrix4f ortho_matrix(GLfloat left,
                                  GLfloat right,
                                  GLfloat bottom,
