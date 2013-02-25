@@ -20,6 +20,8 @@
 		0C9E7EB416DA06FE009AD8B2 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7EB216DA06FE009AD8B2 /* utility.cpp */; };
 		0C9E7EB716DA1701009AD8B2 /* background_frag.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */; };
 		0C9E7EB816DA1701009AD8B2 /* projection_vertex.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C9E7EB516DA0A79009AD8B2 /* projection_vertex.glsl */; };
+		0C9E7EBA16DAE984009AD8B2 /* wave_frag.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C9E7EB916DAE7A2009AD8B2 /* wave_frag.glsl */; };
+		0C9E7EBC16DAF323009AD8B2 /* wave_vertex.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C9E7EBB16DAF2B7009AD8B2 /* wave_vertex.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 			dstPath = shaders;
 			dstSubfolderSpec = 7;
 			files = (
+				0C9E7EBC16DAF323009AD8B2 /* wave_vertex.glsl in CopyFiles */,
+				0C9E7EBA16DAE984009AD8B2 /* wave_frag.glsl in CopyFiles */,
 				0C9E7EB716DA1701009AD8B2 /* background_frag.glsl in CopyFiles */,
 				0C9E7EB816DA1701009AD8B2 /* projection_vertex.glsl in CopyFiles */,
 			);
@@ -63,6 +67,8 @@
 		0C9E7EB216DA06FE009AD8B2 /* utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utility.cpp; sourceTree = "<group>"; };
 		0C9E7EB316DA06FE009AD8B2 /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
 		0C9E7EB516DA0A79009AD8B2 /* projection_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = projection_vertex.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		0C9E7EB916DAE7A2009AD8B2 /* wave_frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wave_frag.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		0C9E7EBB16DAF2B7009AD8B2 /* wave_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wave_vertex.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,8 @@
 			children = (
 				0C9E7EAD16DA03E6009AD8B2 /* background_frag.glsl */,
 				0C9E7EB516DA0A79009AD8B2 /* projection_vertex.glsl */,
+				0C9E7EB916DAE7A2009AD8B2 /* wave_frag.glsl */,
+				0C9E7EBB16DAF2B7009AD8B2 /* wave_vertex.glsl */,
 			);
 			name = shaders;
 			path = ../shaders;

@@ -39,6 +39,11 @@ void WavelikeApp::run()
                 case SDL_QUIT:
                     _running = false;
                     break;
+                case SDL_WINDOWEVENT:
+                    if (event.window.event == SDL_WINDOWEVENT_RESIZED) {
+                        _display.set_viewport_size(std::make_pair(event.window.data1, event.window.data2));
+                    }
+                    break;
                 default:
                     break;
             }

@@ -70,6 +70,18 @@ void Display::set_viewport_size(const std::pair<unsigned int, unsigned int> &siz
     glViewport(0, 0, size.first, size.second);
 }
 
+void Display::update_programmable_projection(ShaderProgramRef shader_program)
+{
+    GLint proj_uniform = shader_program->get_uniform("projection");
+    glUniformMatrix4fv(proj_uniform, 1, GL_FALSE, get_projection_matrix().data());
+}
+
+void Display::update_programmable_viewport(ShaderProgramRef shader_program)
+{
+    GLint viewport_uniform = shader_program->get_uniform("viewport_size");
+    glUniform2f(viewport_uniform, _viewport_size.first, _viewport_size.second);
+}
+
 // internal
 
 void Display::_init_window()

@@ -31,6 +31,9 @@ public:
     const std::pair<unsigned, unsigned>& get_viewport_size() const;
     void set_viewport_size(const std::pair<unsigned, unsigned> &size);
     
+    void update_programmable_projection(ShaderProgramRef shader_program);
+    void update_programmable_viewport(ShaderProgramRef shader_program);
+    
 protected:
     void _init_window();
     void _init_opengl();

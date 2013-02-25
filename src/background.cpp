@@ -74,12 +74,12 @@ void Background::_update_uniforms()
     
     // setup the modelview and projection matrices
     if (display != nullptr) {
-        GLint proj_uniform = _shader_program->get_uniform("projection");
-        glUniformMatrix4fv(proj_uniform, 1, GL_FALSE, get_display()->get_projection_matrix().data());
-        
-        GLint modelview_uniform = _shader_program->get_uniform("modelview");
-        glUniformMatrix4fv(modelview_uniform, 1, GL_FALSE, Util::identity_matrix().data());
+        display->update_programmable_projection(_shader_program);
+        display->update_programmable_viewport(_shader_program);
     }
+    
+    GLint modelview_uniform = _shader_program->get_uniform("modelview");
+    glUniformMatrix4fv(modelview_uniform, 1, GL_FALSE, Util::identity_matrix().data());
     
     // setup the begin/end colors for the fragment shader
     GLint begin_color_uniform = _shader_program->get_uniform("begin_color");
@@ -87,12 +87,6 @@ void Background::_update_uniforms()
     
     GLint end_color_uniform = _shader_program->get_uniform("end_color");
     glUniform4fv(end_color_uniform, 1, _end_color.data());
-    
-    if (display != nullptr) {
-        std::pair<unsigned, unsigned> viewport_size = display->get_viewport_size();
-        GLint viewport_uniform = _shader_program->get_uniform("viewport_size");
-        glUniform2f(viewport_uniform, viewport_size.first, viewport_size.second);
-    }
 }
 
 } // namespace zdev
